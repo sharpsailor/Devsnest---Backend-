@@ -1,0 +1,16 @@
+Event Loop and Async Programming
+
+JavaScript is a Single Threaded language, which basically means that the statements are executed one at a time.
+These statements block the execution of the immediate next statements until they are completed executed. Because of this reason they are also known as Blocking Statements.
+The statements are executed using a Call Stack. A statement which has to be executed, it is pushed into the stack, executed, and then popped out of the stack. All the nested/recurring function calls are stacked on top of each other.
+An Event loop is browser’s mechanism to perform non-blocking operations by providing WebAPIs (setTimeout, setInterval, etc.) which are capable of maintaining callback references in memory.
+The callbacks are then added to event queue.
+Finally. the Event loop pushes the callback back to the Call Stack from the Event queue when the call stack is empty. Here the callback is executed.
+ THA :
+        node files.js mkdir test
+        node files.js write test/a.txt "Hello, World."
+        node files.js append test/a.txt " Hmm..."
+        node files.js read test/a.txt
+        node files.js rename test/a.txt test/b.txt
+        node files.js rm test/b.txt
+        node files.js rmdir test
