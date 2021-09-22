@@ -1,1 +1,1 @@
-## THA: Read about other encryptions
+## THA: Find other encryptions
